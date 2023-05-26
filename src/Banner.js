@@ -20,6 +20,9 @@ useEffect(() => {
 }, [])
 
 function truncate(string, n) {
+    if (string===undefined || string==="undefined") {
+        return ""
+    }
     return string?.length > n ? string.substring(0, n-1) + '...' : string;
 }    
 
